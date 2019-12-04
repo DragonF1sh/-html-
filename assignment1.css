@@ -1,0 +1,35 @@
+.blue {
+    background-color: rgb(238, 213, 180);
+}
+
+.red {
+    padding: 10px;
+    min-height: 300px;
+}
+
+.green {
+    background-color: rgb(167, 137, 99);
+    padding: 10px;
+    margin: 10px;
+}
+
+.black {
+    background-color: rgb(167, 137, 99);
+    padding: 2px;
+    margin: 2px;
+}
+
+.brown {
+    background-color: burlywood;
+}
+
+.purple {
+    margin: 10px;
+}
+
+
+.orange {
+    background-color: rgb(167, 137, 99);
+    margin: 10px;
+    padding: 35px;
+}
