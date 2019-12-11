@@ -1,22 +1,25 @@
 .blue {
-    background-color: black;
+    background-color: rgb(66, 65, 65);
 }
+
 .red {
     margin: 5px;
-
-    
 }
+
 .green {
     margin: 5px;
-   
+
 }
+
 .black {
     width: 100%;
 }
+
 .button {
     width: 100%;
-    background-color: gray;
+    background-color: rgb(153, 152, 152);
 }
-.screen{
+
+.screen {
     width: 100%;
 }
