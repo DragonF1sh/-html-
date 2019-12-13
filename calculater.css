@@ -1,5 +1,5 @@
 .blue {
-    background-color: rgb(66, 65, 65);
+    background-color: rgb(69, 69, 69);
 }
 
 .red {
@@ -15,9 +15,13 @@
     width: 100%;
 }
 
-.button {
+.number,
+.operator,
+.equal,
+.decimal,
+.clear {
     width: 100%;
-    background-color: rgb(153, 152, 152);
+    background-color: rgb(184, 179, 172);
 }
 
 .screen {
