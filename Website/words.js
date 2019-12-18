@@ -35,6 +35,18 @@ document.addEventListener('DOMContentLoaded', function () {
         "<B>" + adjectives[Math.floor(Math.random() * Math.floor(adjectives.length))] + "</B>" +  
         " " + 
         "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" +
+        ". " +
+        "NO! How about you " +
+        "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" +
+        " " +
+        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" +
+        " while I " +
+        "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" +
+        " your " +
+        "<B>" + adjectives[Math.floor(Math.random() * Math.floor(adjectives.length))] + "</B>" +
+        " " + 
+        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" +
         ".";
+
     document.getElementsByName('words')[0].innerHTML = sentence;
 });
