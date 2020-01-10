@@ -5,35 +5,29 @@ document.addEventListener('DOMContentLoaded', function () {
     var nouns = ["street", "harbor", "bell", "soda", "care", "ocean", "table", "behavior", "current", "calculator", "pull", "dirt", "friend", "zoo", "ticket", "crook", "chicken", "talk", "noise", "burst", "afterthought", "notebook", "copper", "trousers", "chickens", "root", "yak", "berry", "rice", "bomb", "rabbits", "low", "foot", "amusement", "son", "camera", "pollution", "pig", "pest", "eggnog", "grandmother", "coal", "test", "plant", "sail", "grape", "button", "toad", "wilderness", "way", "popcorn", "chin", "coil", "rail", "drawer", "ship", "children", "advice", "stitch", "destruction", "company", "lunchroom", "trouble", "leather", "truck", "sisters", "number", "visitor", "playground", "stamp", "party", "look", "basketball", "fireman", "crowd", "watch", "plot", "mine", "pizzas", "group", "form", "milk", "step", "arm", "monkey", "bait", "houses", "airport", "bear", "roof", "flavor", "action", "room", "hole", "wool", "wealth", "stream", "need", "swing", "base", "locket", "event", "kick", "dock", "underwear", "territory", "wind", "mist", "regret", "bucket", "dogs", "soup", "thought", "books", "man", "science", "ants", "sense", "suit", "wheel", "cemetery", "structure", "toys", "driving", "quince", "icicle", "eggs", "tendency", "skirt", "sleep", "religion", "increase", "hour", "cow", "crown", "blow", "development", "queen", "snail", "eye", "drain", "page", "gun", "wax", "quarter", "coast", "plane", "flag", "wire", "letters", "committee", "interest", "cakes", "meal", "toothpaste", "change", "jar", "title", "rhythm", "direction", "thumb", "spiders", "dime", "flame", "skate", "orange", "slip", "celery", "smile", "butter", "veil", "aftermath", "degree", "picture", "end", "bulb", "class", "magic", "grade", "paper", "seed", "business", "year", "language", "eyes", "bike", "marble", "walk", "twig", "cart", "zephyr", "mailbox", "spoon", "scent", "steel", "scarf", "whistle", "hot", "road", "liquid", "sheet", "thing", "flight", "writer", "babies", "tail", "throne", "jail", "condition", "vase", "cause", "spark", "horses", "dinosaurs", "loaf", "match", "rat", "motion", "gate", "detail", "silver", "tooth", "fold", "kitty", "property", "wrench", "fork", "snow", "store", "tiger", "distribution", "connection", "cushion", "plantation", "hook", "cabbage", "machine", "circle", "food", "oatmeal", "wren", "jam", "tin", "limit", "mice", "stew", "verse", "pear", "wine", "brake", "ghost", "woman", "seashore", "weight", "top", "recess", "lip", "bee", "brother", "smoke", "request", "position", "crack", "bag", "trade", "earthquake", "selection", "carpenter", "earth", "vessel", "memory", "kettle", "planes", "ray", "sheep", "view", "teeth", "place", "jellyfish", "pancake", "box", "trains", "pen", "cars", "teaching", "love", "crow", "snails", "moon", "experience", "fog", "friends", "volcano", "design", "gold", "turkey", "coat", "door", "growth", "note"]
     var names = ["Desmond", "Carla", "Carmen", "Taylor", "Domenic", "Billie", "Betty", "Essie", "Jeannine", "Wendi", "Rocco", "Mauro", "Roman", "Miguel", "Tanisha", "Margie", "Manuela", "Crystal", "Devon", "Justine", "Patsy", "Jewell", "Jospeh", "Deena", "Terri", "Marion", "Margarito", "Nelson", "Carey", "Joey", "Jody", "Adan", "Gilbert", "Antonia", "Cyril", "Buddy", "Carter", "Ada", "Trina", "Lana", "Sophia", "Omer", "Julio", "Arthur", "Danial", "Nannie", "Lola", "Luther", "Bernie", "Angelica", "Eddy", "Elva", "Helga", "Andreas", "Cassie", "Emilio", "Karen", "Columbus", "Lazaro", "Marlene", "Maynard", "Darwin", "Richard", "Mabel", "Odis", "Damien", "Laurie", "Willie", "Ramiro", "Celina", "Errol", "Virgil", "Myrna", "Savannah", "Mohammad", "Millicent", "Dallas", "Stacy", "Cathleen", "Robin", "Nadia", "Katharine", "Wilford", "Bonita", "Therese", "Janell", "Janette", "Gerardo", "Jeremy", "Zachariah", "Ruben", "Cassandra", "Roscoe", "Teri", "Joni", "Andrea", "Doris", "Corinne", "Sherwood", "Malcom", "Fredrick", "Darrel", "Wilda", "Patricia", "Stephan", "Sophie", "Kory", "Tuan", "Eva", "Melva", "Debora", "Shari", "Hannah", "Raleigh", "Hector", "Adam", "Wilton", "Demarcus", "Lynette", "Fernando", "Alison", "Tara", "Maria", "Katherine", "Anderson", "Augustine", "Adele", "Jefferson", "Gaston", "Meagan", "Virgie", "Lottie", "Johnathan", "Johnny", "Randal", "Kaitlin", "Jody", "Elsie", "Tommie", "Faustino", "Danilo", "Ronnie", "Flossie", "Zackary", "Caroline", "Eloise", "Avery", "Odessa", "Angelique", "Booker", "Darron", "Rachelle", "Stella", "Fletcher", "Jannie", "Landon", "Isabelle", "Charlotte", "Irma", "Erasmo", "Donnie", "Gino", "Wilbur", "Chasity", "Karyn", "Lesa", "Andrew", "Hilary", "Alissa", "Suzette", "Antone", "Terry", "Sanford", "Francisco", "Margaret", "Eileen", "Kasey", "Lionel", "Silvia", "Roger", "Adalberto", "Randell", "Elroy", "Walker", "Concepcion", "Elisha", "Margarita", "Selena", "Louis", "Ricardo", "Anthony", "Donna", "Serena", "Celeste", "Francis", "Lidia", "Lakeisha", "Santo", "Candice", "Katrina", "Francis", "Delbert", "Hayden", "Hobert", "Gretchen", "Effie", "Arnold", "Manuel", "Bertie", "Kristin", "Trenton", "Natalie", "Janice", "Arline", "Adolfo", "Dion", "Lowell", "Rolland", "Candace", "Jacquelyn", "Kurtis", "Stanford", "Glenda", "Angelina", "Coleen", "Carlene", "Joann", "Jimmie", "Jeanie", "Minnie", "Leslie", "Christy", "Quentin", "Marylou", "Gilda", "Marisol", "Janet", "Sheri", "Sheldon", "Cristina", "Bessie", "Bethany", "Dorothy", "Adrian", "Denis", "Jamaal", "Jodi", "Ofelia", "Joel", "Tony", "Solomon", "Wiley", "Simone", "Margret", "Eliza", "Dannie", "Cyrus", "Maryann", "Russel", "Wilburn", "Willis", "Jeffery", "Lucy", "Edward", "Rodolfo", "Natasha", "Lucas", "Manual", "Alva", "Carmen", "Austin", "Nettie", "Kimberly", "Yesenia", "Williams", "Hester", "Kenton", "Monty", "Cherie", "Mauricio", "Deirdre", "Marian", "Nathan", "Elise", "Daren", "Tristan", "Ryan", "Carole", "Robbie", "Eleanor", "Ismael", "Gladys", "David", "Andy", "Lakisha", "Letitia", "Darrin", "Palmer", "Abraham", "Ina"]
 
-    var sentence = 
-        "Hey you! Its time you let " + 
-        "<B>" + names[Math.floor(Math.random() * Math.floor(names.length))] + "</B>" +
-        " " +
-        "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" + 
-        " my " + 
-        "<B>" +  nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" + 
-        " and " + 
-        "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" + 
-        " my " + 
-        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" + 
-        " you " + 
-        "<B>" + adjectives[Math.floor(Math.random() * Math.floor(adjectives.length))] + "</B>" +  
-        " " + 
-        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" +
-        ". " +
-        "NO! How about you " +
+    var sentence =
+        "Hey you! Its time you let " +
+        "<B>" + names[Math.floor(Math.random() * Math.floor(names.length))] + "</B>" + " " +
         "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" +
-        " " +
+        " my " +
+        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" +
+        " and " +
+        "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" +
+        " my " +
+        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" +
+        " you " +
+        "<B>" + adjectives[Math.floor(Math.random() * Math.floor(adjectives.length))] + "</B>" + " " +
+        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" + ". " +
+        "NO!? How about you " +
+        "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" + " " +
         "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" +
         " while I " +
         "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" +
         " your " +
-        "<B>" + adjectives[Math.floor(Math.random() * Math.floor(adjectives.length))] + "</B>" +
-        " " + 
-        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" +
-        ". " +
+        "<B>" + adjectives[Math.floor(Math.random() * Math.floor(adjectives.length))] + "</B>" + " " +
+        "<B>" + nouns[Math.floor(Math.random() * Math.floor(nouns.length))] + "</B>" + ". " +
         "<B>" + verbs[Math.floor(Math.random() * Math.floor(verbs.length))] + "</B>" +
         " you!";
-
     document.getElementsByName('words')[0].innerHTML = sentence;
+
 });
