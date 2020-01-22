@@ -1,12 +1,12 @@
 <html>
 
 <?php
-    $username = "random"
-    $pasword = "abc123"
-    $databace = "website"
-    $server = "localhost"
+    $username = "random";
+    $pasword = "abc123";
+    $databace = "website";
+    $server = "localhost";
 
-    $connection = new mysql($server, $username, $pasword, $databace);
+    $connection = new mysqli($server, $username, $pasword, $databace);
 ?>
 
 <head>
