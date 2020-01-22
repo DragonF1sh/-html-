@@ -1,5 +1,14 @@
 <html>
 
+<?php
+    $username = "random"
+    $pasword = "abc123"
+    $databace = "website"
+    $server = "localhost"
+
+    $connection = new mysql($server, $username, $pasword, $databace);
+?>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -163,7 +172,7 @@
                         E-mail:<br>
                         <input type="text" name="email" placeholder="Ex: John.Doh@example.ca" style="width: 75%;"><br>
                         Phone Number:<br>
-                        <input type="text" name="email" placeholder="Ex: 8008008000" style="width: 75%;"><br>
+                        <input type="text" name="phoneNuber" placeholder="Ex: 8008008000" style="width: 75%;"><br>
                         message:<br>
                         <textarea type="text" name="message" placeholder="Write your question here"
                             style="width: 75%;"></textarea>
@@ -357,3 +366,35 @@
 </body>
 
 </html>
+
+<?php
+    $name = null;
+    $email = null;
+    $phoneNumber = null;
+    $message = null;
+
+    if (isset($_POST['name'])){
+        $name = $_POST['name'];
+    }
+    if (isset($_POST['email'])){
+        $email = $_POST['email'];
+    }
+    if (isset($_POST['phoneNumber'])){
+        $phoneNumber = $_POST['phoneNumber'];
+    }
+    if (isset($_POST['message'])){
+        $message = $_POST['message'];
+    }
+    if($name && $email && $phoneNumber && $message) {
+        $query = $connection->prepare("INSERT INTO websiteContact (name, email, phoneNumber, message) VALUES (?, ?, ?, ?)");
+        $query->bind_pram('ssss', $name, $email, $phoneNumber, $message);
+        $query->execute();
+        $result = $query->get_result();
+
+        $connection->close();
+
+        header('Location:Website2.0.php');
+    };
+
+    $connection->close();
+?>
