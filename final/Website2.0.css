@@ -1,3 +1,4 @@
+body, 
 .blue {
     background-color: rgb(238, 208, 167);
 }
@@ -52,4 +53,9 @@
 
 .pink {
     width: 100%;
+}
+#myCanvas {
+    height: 100%;
+    width: 100%;
+    background-color: black;
 }
